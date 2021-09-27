@@ -67,11 +67,6 @@ public class PersonaController {
 
 	}
 
-	/*
-	 * @DeleteMapping("/eliminar/{id}") public void delete(@PathVariable("id")
-	 * String id){ personaService.eliminarPersonaPorId(id); }
-	 */
-
 	@DeleteMapping("/eliminar/{id}")
 	public ResponseEntity<?> eliminarRegistro(@PathVariable("id") String id) {
 		Optional<Persona> persona = personaService.getInformacionPersonaPorId(id);
