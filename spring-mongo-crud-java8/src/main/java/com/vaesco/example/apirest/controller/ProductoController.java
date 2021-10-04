@@ -1,9 +1,8 @@
 package com.vaesco.example.apirest.controller;
 
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+
 
 import javax.validation.Valid;
 
@@ -70,17 +69,7 @@ public class ProductoController {
 		return ResponseEntity.ok(actualizarProducto);
 	}
 
-	/*
-	 * @DeleteMapping("/products/{id}") public Map<String, Boolean>
-	 * deleteProduct(@PathVariable(value = "id") Long productId) throws
-	 * ResourceNotFoundException { Product product =
-	 * productRepository.findById(productId) .orElseThrow(() -> new
-	 * ResourceNotFoundException("Product not found for this id :: " + productId));
-	 * 
-	 * productRepository.delete(product); Map<String, Boolean> response = new
-	 * HashMap<>(); response.put("deleted", Boolean.TRUE); return response; }
-	 * 
-	 */
+
 
 	@DeleteMapping("/productos/{id}")
 	public ResponseEntity<?> eliminarProducto(@PathVariable("id") Long productoId) throws ResourceNotFoundException {
